@@ -1,0 +1,122 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<title>Getting Started With Wearables</title>
+
+<header>
+    <p>HTML5 Today</p>
+    <p>Your main source for HTML news</p>
+</header>
+<nav>
+    <ul>
+        <li>Web Development</li>
+        <li>Web Design</li>
+        <li>Mobile App Development</li>
+        <li>Photo Editing</li>
+    </ul>
+</nav>
+
+<main>
+<article>
+    <header>
+        <h1>Getting Started With Wearables: How To Plan, Build And Design</h1>
+        
+        <p>By Maximiliano Firtman</p>
+        
+        <p>October 12th, 2015 </p>
+    </header>
+<p>If a user of your product is buying a smartwatch tomorrow and your app is not compatible with it or your notifications can’t be triggered from there, you might frustrate them. If you have a website or an app today, <strong>it’s time to start planning support for wearable devices</strong>. In this article, we’ll review the platforms available today, what we can do on each of them, how to plan the architecture, and how to develop apps or companion services for these new devices.</p>
+
+<p>Do you remember the shoe phone from Get Smart? If you don’t know what I’m talking about, you are probably too young (or I’m too old). (You can Google it now. Just go; I’ll wait here in this tab.) The shoe phone we saw on TV was followed by many other wearable devices on TV, such as the ones on Knight Rider, The Flintstones, James Bond and Dick Tracy. Many years later, we can say that wearable devices are here and ready to use. We, as designers and developers, need to be ready to develop successful experiences for them.</p>
+
+<h2> Developing For Wearables</h2>
+
+<p>In this article, we will cover the <i>most important</i> platforms ready to support our content and services, what we can do on them and where to start in terms of languages, <abbr title="Software Development Kit">SDKs</abbr> and emulators.</p>
+
+<p><small>Note: Some providers, such as <b>Fitbit</b>, offer an API from their cloud, instead of allowing you to connect your app to the device itself. Therefore, a native app on a user’s phone will upload data to the cloud, and your app can access that data from there after gaining the user’s permission.</small></p>
+
+<h3>Android Wear</h3>
+
+<p>Android Wear is a custom version of the popular Android OS for smartwatches only. Several manufacturers are creating Android Wear devices, and more than 15 devices are on the market today, including Motorola 360, Samsung Gear Live, LG G Round, Asus ZenWatch and Sony Smartwatch 3.</p>
+
+<p>Android Wear is a fully capable OS, but in most situations it works as a phone companion. It connects to the web mainly through the phone’s connection. Some devices now support Wi-Fi networks, so if you are at home or at the office and your phone is out of range, your watch will work anyway, using the cloud to get data from your phone. The OS supports both square and circular screens, and it needs to be paired with an Android 4.2+ phone to work. At the time of writing, limited iOS support is available for a limited set of devices launched after August 2015.</p>
+
+<blockquote>
+"This is a very exciting segment to be in and we have barely scratched the surface. Wearables will be the next wave of computing, and they are a great addition to the smartphone experience"
+<br>Sundar Pichai https://twitter.com/sundarpichai
+</blockquote>
+
+
+<h3>Apple Watch</h3>
+
+<div>
+<p>A year after Android Wear was released, Apple Watch appeared on the market, selling as many watches in one day as the Android counterpart did in one year, according to Slice Intelligence’s market research. Besides having the same initials (AW), both platforms are quite different in terms of what the OS offers to the user.</p>
+
+<p>Apple Watch runs watchOS, a simple OS for the watch. On watchOS 1.0, apps ran on your phone, and the watch app itself had just a very simple UI module running on it. In watchOS 2.0 — launched with iOS 9 this month — apps runs directly on the smartwatch, with full access to native features.</p>
+
+<p>In terms of hardware, there are more than 40 models, but designers and developers need only care about the two screen sizes: 38 and 42 millimeters. Besides the touchscreen, Apple Watch features a digital crown to scroll and zoom, a heart rate sensor and “Force Touch” (which distinguishes between a normal tap and a tap with pressure).</p>
+</div>
+
+<h3>Samsung Gear (Tizen-Based)</h3>
+
+<p>Gear is a series of smartwatches from Samsung, including Gear 2, Gear S and the recent Gear S2. These watches run Tizen, a relatively new OS from Samsung for mobile devices. There is also Gear Live, which is based on Android Wear and is the black sheep of the family.</p>
+
+<p>Gear 2 features a square screen, Gear S has a larger (and taller) rectangular screen, and Gear S2 sports a round screen with a rotating bezel. Sensors vary by model and detect heart rate, UV, light and much more.</p>
+
+<p>Gear S is completely autonomous, with its own 3G cellular connection, and it can be paired with a Galaxy Samsung device, as well as the other models in the family where that pairing process is mandatory. Gear S2 has a Wi-Fi and a 3G version, the latter coming with a GPS chip.</p>
+
+<p>Gear devices usually don’t work with iPhones or with Androids outside of the Galaxy family. The only exception is the latest Gear S2, which works with any Android 4.4+ device.</p>
+
+<aside>
+    <p>Google Glass: While this platform is still at an impasse and you can’t buy the initial $1,500 Glass prototype anymore, the platform will resurface as a product for the enterprise market, according to different sources. Clearly, we are not going to see everyone on the street wearing Glass soon, but it will probably be a good solution for work and for some industries.</p>
+</aside>
+
+<hr>
+
+<h2> What We Can Do For These Devices Link</h2>
+
+<p>We can offer several kind of solutions for wearable devices today:</p>
+
+<p>Standalone apps run on the device itself. These apps may use the phone to get a network connection or get a connection directly though Wi-Fi.</p>
+<p>Companion apps run primarily on the phone, sending UI commands to the device’s app and receiving interaction from the user. They can also be companions in a game or an app that is being controlled by the user on a phone (or TV)</p>
+<p>Faces for watches feature a custom clock screen, the kind you see when you look at a watch without interacting with it.</p>
+<p>Cards or glances are static views that are available quickly from the home screen and feature updated content from an app.</p>
+<p>Rich notifications add wearable-specific abilities to the push or local notifications that are delivered by a phone app.</p>
+
+
+<h2> Architecture Of A Wearable Solution</h2>
+<ol type="a" start="10" reversed>
+    <li><h3>Smartphone Module</h3>
+        <p>Besides Google Glass and Samsung Gear S and S2 for autonomous applications, you will need two native apps in the stores to carry your wearable app (one for Android and one for iPhone).</p>
+        <p>With your native app on an Android phone, you will be able to support Android Wear, Tizen (only for Galaxy-based devices), Pebble and Microsoft Band users.</p>
+        <p>With the native app for iPhone, you will be able to support Apple Watch, Pebble and Microsoft Band users. For users of Windows on mobile — formerly Windows Phone — the Microsoft Band is currently the only compatible platform.</p>
+    </li>
+    <li><h3>USER INTERFACE AND CONTROLS</h3>
+        <p>I don’t need to explain that we are working with a very tiny screen here. Therefore, micro-layouts are the only solution to a successful wearable app. Be as short as possible, reduce every bit of text, and don’t just minify your mobile screen. Brainstorm and start from scratch with your wearable screens.</p>
+    </li>
+    <li>
+        <h3>SCREEN NAVIGATION</h3>
+        <p>Navigation between screens is usually done in one of two ways.</p>
+    </li>
+</ol>
+
+<section>
+<p>Modal or push screens appear after the user selects an item from a list or clicks a button. All platforms provide, through physical buttons or gestures, an automatic way to go back to the previous screen, so do not implement your own navigation for that.</p>
+
+<p>Pages let you show different sections of information or sections similar to a tab navigator on a phone. To change pages, the user swipes left or right using their finger.</p>
+</section>
+
+    <footer>
+        <dl>
+            <dt>Name</dt>       <dd>Maximiliano Firtman</dd>
+            <dt>Twitter</dt>    <dd>@firt</dd>
+            <dt>Bio</dt>        <dd>He is a mobile+web developer, consultant, trainer and author of the books Programming the Mobile Web (2nd. edition), Up and Running: jQuery Mobile and the upcoming High Performance Mobile Web. He is a frequent speaker at international events, including Fluent, JSConf, TopConf, Velocity Conference talking about performance, mobile HTML5 and wearables. He has delivered more than 300 trainings in more than 30 countries, including online trainings for Mobile HTML5, Apache Cordova and other topics. He mantains the HTML5 Mobile Compatibility list and usually publish information on new capabilities on mobile browsers in his blog.</dd>
+        </dl>
+    </footer>
+</article>
+</main>
+
+<footer>
+    <p>Copyright</p>
+    <p>Contact us at test@test.com</p>
+</footer>
